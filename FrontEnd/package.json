@@ -1,0 +1,31 @@
+{
+  "name": "app1",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.5",
+    "cors": "^2.8.4",
+    "griddle-react": "^1.11.2",
+    "mobx": "^4.2.1",
+    "mobx-react": "^5.1.2",
+    "namor": "^1.0.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-burger-menu": "^2.4.2",
+    "react-dom": "^16.3.1",
+    "react-dynamic-modal": "^1.1.1",
+    "react-icons": "^2.2.7",
+    "react-modal": "^3.4.4",
+    "react-native-vector-icons": "^4.6.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-table": "^6.8.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
