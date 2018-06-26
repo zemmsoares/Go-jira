@@ -7,8 +7,8 @@ body {
   position: fixed;
   width: 36px;
   height: 30px;
-  left: 36px;
-  top: 36px;
+  left: 43px;
+  top: 23px;
 }
 
 /* Color/shape of burger icon bars */
@@ -58,6 +58,7 @@ body {
 
 .logo {
   margin-bottom: 40px;
+  width: 100%;
 }
 
 .page-test {
@@ -88,9 +89,8 @@ position: fixed;
 }
 
 .page-title {
-  font-size: 20px;
-  margin-right: 30px;
-  color: #595959;
+  color: #C1BFBF !important;
+  font-weight: bold;
 }
 
 .logoicon {
@@ -106,6 +106,14 @@ position: fixed;
   margin-left: 90px;
 }
 
+.testey {
+  margin-top: 34px;
+  margin-right: 45px;
+}
+
+.searchsprintpad {
+  margin-left: 10px;
+}
 
 .testec {
   margin-top: 34px;
@@ -117,7 +125,102 @@ position: fixed;
   margin-left: 10px;
 }
 
+.estado {
+  width: 40%;
+}
 
+.estadocor {
+  color: #b8b7ad;
+}
+
+bold1 {
+  color: black;
+  font-weight: bold;
+}
+
+.progressbar {
+  width: 10%;
+}
+
+.daysassignee {
+  background-color: #FFBA00;
+}
+
+ttt {
+  color: #1A79AD;
+}
+
+yyy {
+  color: #595959;
+}
+
+.gologoheader {
+  width: 15px;
+}
+
+.barborala {
+  width: 250px;
+  position: relative;
+  top: -7px;
+}
+
+.startbutton {
+  width: 170px;
+  padding: 7px;
+}
+.endbutton {
+  width: 170px;
+  padding: 7px;
+}
+.durationbutton {
+  width: 170px;
+  padding: 7px;
+}
+
+.start-position {
+  position: absolute;
+  bottom: 8px;
+  left: 57px;
+  color: white;
+  font-weight: bold;
+}
+
+.end-position {
+  position: absolute;
+  bottom: 8px;
+  left: 227px;
+  color: white;
+  font-weight: bold;
+}
+
+.duration-position {
+  position: absolute;
+  bottom: 8px;
+  left: 408px;
+  color: white;
+  font-weight: bold;
+}
+
+.end-position1 {
+  position: absolute;
+  bottom: 8px;
+  left: 220px;
+  color: white;
+  font-weight: bold;
+}
+
+.modal-backdrop {
+  visibility: hidden !important;
+}
+.modal.in {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.z1 {
+  z-index: 1000;
+}
+
+.z3 {z-index: 1200;}
 
 .logoiconassignee {
   width: 2%;
@@ -145,6 +248,18 @@ position: fixed;
 .assigneeform {
   margin-left: 130px;
   margin-top: 40px;
+}
+
+.avatar-assignee {
+  margin: auto;    
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.classWithPad { 
+  margin:5px; 
+  padding:5px; 
 }
 
 @keyframes bounceIn {
@@ -178,86 +293,145 @@ a:hover{
 done {
   display: inline-block;
   vertical-align: middle;
-    height: 22px;
-    width: 22px;
-    line-height: 22px;;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;;
 
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 
-    background-color: #41A85F;
-    color: white;
-    text-align: center;
-    font-size: 12px;
+  background-color: #ce4296;
+  color: white;
+  text-align: center;
+  font-size: 12px;
 }
 
 inprogress {
-    display: inline-block;
+  display: inline-block;
   vertical-align: middle;
-    height: 22px;
-    width: 22px;
-    line-height: 22px;;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;;
 
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 
-    background-color: #FFBA00;
-    color: white;
-    text-align: center;
-    font-size: 12px;
+  background-color: #ce4296;
+  color: white;
+  text-align: center;
+  font-size: 12px;
 }
 
 peerreview {
-    display: inline-block;
+  display: inline-block;
   vertical-align: middle;
-    height: 22px;
-    width: 22px;
-    line-height: 22px;;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;;
 
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 
-    background-color: #D14841;
-    color: white;
-    text-align: center;
-    font-size: 12px;
+  background-color: #ce4296;
+  color: white;
+  text-align: center;
+  font-size: 12px;
 }
 
 intest {
-    display: inline-block;
+  display: inline-block;
   vertical-align: middle;
-    height: 22px;
-    width: 22px;
-    line-height: 22px;;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;;
 
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 
-    background-color: #1A79AD;
-    color: white;
-    text-align: center;
-    font-size: 12px;
+  background-color: #ce4296;
+  color: white;
+  text-align: center;
+  font-size: 12px;
 }
 
 readyfordev {
-    display: inline-block;
+  display: inline-block;
   vertical-align: middle;
-    height: 22px;
-    width: 22px;
-    line-height: 22px;;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;;
 
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 
-    background-color: #ce4296;
-    color: white;
-    text-align: center;
-    font-size: 12px;
+  background-color: #ce4296;
+  color: white;
+  text-align: center;
+  font-size: 12px;
 }
 
-.modal-body {
-    max-height: calc(100vh - 210px);
-    overflow-y: auto;
+pending {
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;;
+
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  background-color: #ce4296;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+qaimprovements {
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;;
+
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  background-color: #ce4296;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+underreview {
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;;
+
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  background-color: #ce4296;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+readyfortesting {
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;;
+
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  background-color: #ce4296;
+  color: white;
+  text-align: center;
+  font-size: 12px;
 }
 
 h3 {
@@ -269,4 +443,270 @@ h3 span {
 
 h3 span1 { 
     background-color: red; 
+}
+
+
+.modal{
+  display: block !important;
+}
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+height: 650px;
+overflow-y: auto;
+} 
+
+spanhora {
+  color: #1A79AD;
+}
+
+.taskstatus {
+  width: 220px;
+}
+
+.button-done {
+ background-color: #c1bfbf;
+  color: white;
+  border: none;
+  height: 32px;
+  margin-left: 6px;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+.button1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.button2 {
+  margin-left: 6px;
+  font-size: 15px;
+}
+
+.storybutton {
+  color: white;
+  background-color: #C1BFBF;
+}
+
+.padding20 {
+  padding: 30px;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.navcolor {
+  background-color: #EDEDED;
+}
+
+.btn-padding {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-padding-40 {
+  margin-right: 10px;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-padding-45 {
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.margin-right-5 {
+  margin-right: 5px;
+}
+
+.ggg {
+  margin-left: 10px;
+}
+
+.divider {
+  width:5px;
+  height:auto;
+  display:inline-block;
+}
+
+.center-button {
+  width: 100px;
+  margin: 0 auto; 
+}
+
+.custom-select-width {
+  width: 250px;
+}
+
+.leftmargin40{
+  margin-left: 40px;
+}
+
+
+/* 
+######################
+      ButtonStory
+######################
+*/
+.buttonStoryIcon {
+  background-color: #d3d3d3;
+   color: white;
+   border: none;
+   height: 32px;
+   margin-left: 6px;
+   border-radius: 6px;
+   margin-top: 6px;
+ }
+
+.buttonStoryIcon1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.buttonStoryIcon2 {
+  margin-left: 6px;
+  font-size: 15px;
+  background-color: #d3d3d3;
+}
+
+/* 
+######################
+      ButtonBug
+######################
+*/
+.buttonBugIcon {
+  background-color: #d3d3d3;
+   color: white;
+   border: none;
+   height: 32px;
+   margin-left: 6px;
+   border-radius: 6px;
+   margin-top: 6px;
+ }
+
+.buttonBugIcon1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.buttonBugIcon2 {
+  margin-left: 6px;
+  font-size: 15px;
+  background-color: #d3d3d3;
+}
+
+/* 
+######################
+    ButtonIncident
+######################
+*/
+.buttonIncidentIcon {
+  background-color: #d3d3d3;
+   color: white;
+   border: none;
+   height: 32px;
+   margin-left: 6px;
+   border-radius: 6px;
+   margin-top: 6px;
+ }
+
+.buttonIncidentIcon1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.buttonIncidentIcon2 {
+  margin-left: 6px;
+  font-size: 15px;
+  background-color: #d3d3d3;
+}
+
+/* 
+######################
+     ButtonTask
+######################
+*/
+.buttonTaskIcon {
+  background-color: #d3d3d3;
+   color: white;
+   border: none;
+   height: 32px;
+   margin-left: 6px;
+   border-radius: 6px;
+   margin-top: 6px;
+ }
+
+.buttonTaskIcon1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.buttonTaskIcon2 {
+  margin-left: 6px;
+  font-size: 15px;
+  background-color: #d3d3d3;
+}
+
+/* 
+######################
+     buttonSubtaskIcon
+######################
+*/
+.buttonSubtaskIcon {
+  background-color: #d3d3d3;
+   color: white;
+   border: none;
+   height: 32px;
+   margin-left: 6px;
+   border-radius: 6px;
+   margin-top: 6px;
+ }
+
+.buttonSubtaskIcon1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.buttonSubtaskIcon2 {
+  margin-left: 6px;
+  font-size: 15px;
+  background-color: #d3d3d3;
+}
+
+/*
+######################
+     buttonEpic
+######################
+*/
+.buttonEpicIcon {
+  background-color: #d3d3d3;
+   color: white;
+   border: none;
+   height: 32px;
+   margin-left: 6px;
+   border-radius: 6px;
+   margin-top: 6px;
+ }
+
+.buttonEpicIcon1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.buttonEpicIcon2 {
+  margin-left: 6px;
+  font-size: 15px;
+  background-color: #d3d3d3;
+}
+
+datesince {
+  font-weight: bold;
+  font-size: 80%;
 }

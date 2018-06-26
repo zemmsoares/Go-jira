@@ -104,7 +104,7 @@ class Api {
 
     }
 
-            getAllProjectsEndpoint() {
+        getAllProjectsEndpoint() {
         const action = 'project';
 
 
@@ -114,6 +114,17 @@ class Api {
         }
 
 
+    }
+
+
+        getIssueChangeLogEndpoint(issueId){
+        const action = 'issue';
+        const action2 = '?expand=changelog';
+
+        return {
+            path: `${this.protocol}://${this.host}/${this.apiType}/${this.version}/${action}/${issueId}${action2}`,
+            method: this.availableMethods.GET
+        }
     }
 
 }

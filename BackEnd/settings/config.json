@@ -1,6 +1,6 @@
 {
 	"jira" : {
-		"host" : "",
-		"token" : ""
+		"host" : "HOST",
+		"token" : "TOKEN"
 	}
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class ModalIssueSearch  extends React.Component {
+export default class ModalAdvancedSearch extends React.Component {
   render() {
-
+   
     if(!this.props.show) {
       return null;
     }
@@ -15,14 +15,14 @@ export default class ModalIssueSearch  extends React.Component {
       left: 0,
       right: 0,
       backgroundColor: 'rgba(0,0,0,0.3)',
-      padding: 30,      
+      padding: 25,      
     };
 
     const modalStyle = {
       backgroundColor: '#F8F8F8',
       borderRadius: 5,
-      maxWidth: 1700,
-      minHeight: 850,
+      maxWidth: 1500,
+      minHeight: 890,
       margin: '0 auto',
       padding: 10,
     };    
@@ -32,7 +32,7 @@ export default class ModalIssueSearch  extends React.Component {
     <div className="backdrop z3" style={backdropStyle}>
      <div className="modal-content" style={modalStyle}>
           <div className="modal-header">
-            <h4 className="modal-title">{this.props.titulo} {this.props.story}</h4>
+            <h4 className="modal-title">{this.props.titulo}</h4>
             <button onClick={this.props.onClose} type="button" className="close">&times;</button>
           </div>
           <div className="modal-body" >
@@ -48,7 +48,7 @@ export default class ModalIssueSearch  extends React.Component {
   }
 }
 
-ModalIssueSearch .propTypes = {
+ModalAdvancedSearch.propTypes = {
   onClose: PropTypes.func.isRequired,
   show: PropTypes.bool,
   children: PropTypes.node

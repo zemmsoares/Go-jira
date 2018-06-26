@@ -173,4 +173,19 @@ router.get('/projects', function(req, res, next) {
         .then(json => res.send(json));
 });
 
+router.get('/issue/:issueId/changelog', function(req, res, next) {
+
+    const issueId = req.params.issueId;
+
+    const api = new Api();
+    const endpoint = api.  getIssueChangeLogEndpoint(issueId)
+
+    fetch(endpoint.path, {
+            method: endpoint.method,
+            headers: api.headers
+        })
+        .then(resFetch => resFetch.json())
+        .then(json => res.send(json));
+});
+
 module.exports = router;

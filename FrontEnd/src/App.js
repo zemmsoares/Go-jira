@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Route from  'react-router-dom/Route';
 import './App.css';
-import Header from './Common/Header';
+import Header from './Header';
 import SelectBoard from './Sprints/SelectBoard';
 import SelectAssignee from './Assignee/SelectAssignee';
-import logo from './img/logotipo-gocontact.png';
+import logo from './img/logo.png';
 
-
-
-class App extends Component {
+export default class App extends Component {
 
   render() {
 
@@ -52,5 +50,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

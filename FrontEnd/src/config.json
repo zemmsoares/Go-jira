@@ -1,0 +1,8 @@
+{
+	"jira" : {
+		"storypointsfield" : "customfield_10002"
+	},
+	"backend" : {
+		"url" : "http://localhost:8000"
+	}
+}
