@@ -41,12 +41,12 @@ export default class TableSprints extends React.Component {
   }
 
   checkState(state){
-    if(state == 'CLOSED'){
-      return <div><img src={sprintclosed}></img> Sprint</div>
-    } else if(state == 'ACTIVE'){
-      return <div><img src={sprintactive}></img> Sprint</div>
-    } else if(state == 'FUTURE'){
-      return <div><img src={sprintfuture}></img> Sprint</div>
+    if(state === 'CLOSED'){
+      return <div><img src={sprintclosed} alt="sprint_closed"></img> Sprint</div>
+    } else if(state === 'ACTIVE'){
+      return <div><img src={sprintactive} alt="sprint_active"></img> Sprint</div>
+    } else if(state === 'FUTURE'){
+      return <div><img src={sprintfuture} alt="sprint_future"></img> Sprint</div>
     }
   }
 

@@ -1,6 +1,6 @@
 {
 	"jira" : {
-		"host" : "HOST",
-		"token" : "BASE64 STRING"
+		"host" : "yourhost.atlassian.net",
+		"token" : "BASE64 EMAIL@TOKEN"
 	}
 }

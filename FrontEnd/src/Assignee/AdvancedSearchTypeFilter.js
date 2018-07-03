@@ -28,45 +28,46 @@ export default class AdvancedSearchTypeFilter extends React.Component{
 
 
 		filter(type){
+			var i = 0;
 			var abc = this.props.data;
 			const arraydone = [];
-				if(type == ' Story'){
-					for(var i = 0; i<abc.length; i++){
+				if(type === ' Story'){
+					for(i = 0; i<abc.length; i++){
 						if(abc[i].type.props.children[1] === ' Story'){
 							arraydone.push(abc[i]);
 						}	
 					this.setState({type: 'Story'});			
 					}
-			} else if(type == ' Bug'){
-				for(var i = 0; i<abc.length; i++){
+			} else if(type === ' Bug'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].type.props.children[1] === ' Bug'){
 						arraydone.push(abc[i]);
 					}
 					this.setState({type: 'Bug'});			
 				}
-			} else if (type == ' Incident'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === ' Incident'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].type.props.children[1] === ' Incident'){
 						arraydone.push(abc[i]);
 					}
 					this.setState({type: 'Incident'});			
 				}
-			} else if (type == ' Task'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === ' Task'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].type.props.children[1] === ' Task'){
 						arraydone.push(abc[i]);
 					}		
 					this.setState({type: 'Task'});	
 				}
-			} else if (type == ' Sub-Task'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === ' Sub-Task'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].type.props.children[1] === ' Sub-Task'){
 						arraydone.push(abc[i]);
 					}			
 					this.setState({type: 'Sub-Task'});
 				}
-			} else if (type == ' Epic'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === ' Epic'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].type.props.children[1] === ' Epic'){
 						arraydone.push(abc[i]);
 					}		
@@ -109,32 +110,32 @@ export default class AdvancedSearchTypeFilter extends React.Component{
 			<div className="teste" >	
 				<button className="buttonStoryIcon" type="button" onClick={() =>{this.filter(' Story'); this.toggleModal()}}>
 					<span className="buttonStoryIcon1">{Story}</span>
-					<span className="buttonStoryIcon2">Story <img src={Storyicon}></img></span>
+					<span className="buttonStoryIcon2">Story <img src={Storyicon} alt="story_icon"></img></span>
 				</button>
 
 				<button className="buttonBugIcon" type="button" onClick={() =>{this.filter(' Bug'); this.toggleModal()}}>
 					<span className="buttonBugIcon1">{Bug}</span>
-					<span className="buttonBugIcon2">Bug <img src={Bugicon}></img></span>
+					<span className="buttonBugIcon2">Bug <img src={Bugicon} alt="bug_icon"></img></span>
 				</button>
 
 				<button className="buttonIncidentIcon" type="button" onClick={() =>{this.filter(' Incident'); this.toggleModal()}}>
 					<span className="buttonIncidentIcon1">{Incident}</span>
-					<span className="buttonIncidentIcon2">Incident <img src={Incidenticon}></img></span>
+					<span className="buttonIncidentIcon2">Incident <img src={Incidenticon} alt="incident_icon"></img></span>
 				</button>
 
 				<button className="buttonTaskIcon" type="button" onClick={() =>{this.filter(' Task'); this.toggleModal()}}>
 					<span className="buttonTaskIcon1">{Task}</span>
-					<span className="buttonTaskIcon2">Task <img src={Taskicon}></img></span>
+					<span className="buttonTaskIcon2">Task <img src={Taskicon} alt="task_icon"></img></span>
 				</button>
 
 				<button className="buttonSubtaskIcon" type="button" onClick={() =>{this.filter(' Sub-Task'); this.toggleModal()}}>
 					<span className="buttonSubtaskIcon1">{Subtask}</span>
-					<span className="buttonSubtaskIcon2">Sub-Task <img src={Subtaskicon}></img></span>
+					<span className="buttonSubtaskIcon2">Sub-Task <img src={Subtaskicon} alt="sub-task_icon"></img></span>
 				</button>
 
 				<button className="buttonEpicIcon" type="button" onClick={() =>{this.filter(' Epic'); this.toggleModal()}}>
 					<span className="buttonEpicIcon1">{Epic}</span>
-					<span className="buttonEpicIcon2">Epic <img src={Epicicon}></img></span>
+					<span className="buttonEpicIcon2">Epic <img src={Epicicon} alt="epic_icon"></img></span>
 				</button>
 
 			</div>

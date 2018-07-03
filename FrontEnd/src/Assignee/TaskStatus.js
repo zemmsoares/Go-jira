@@ -23,73 +23,74 @@ export default class TaskStatus extends React.Component{
 
 
 		filter(type){
+			var i = 0;
 			var abc = this.props.data;
 			const arraydone = [];
-				if(type == 'done'){
-					for(var i = 0; i<abc.length; i++){
+				if(type === 'done'){
+					for(i = 0; i<abc.length; i++){
 						if(abc[i].status === 'Done'){
 							arraydone.push(abc[i]);
 						}	
 					this.setState({type: 'Done'});			
 					}
-			} else if(type == 'In Test'){
-				for(var i = 0; i<abc.length; i++){
+			} else if(type === 'In Test'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].status === 'In Test'){
 						arraydone.push(abc[i]);
 					}
 					this.setState({type: 'In Test'});			
 				}
-			} else if (type == 'Ready for Testing'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === 'Ready for Testing'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].status === 'Ready for Testing'){
 						arraydone.push(abc[i]);
 					}
 					this.setState({type: 'Ready for Testing'});			
 				}
-			} else if (type == 'QA Improvements'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === 'QA Improvements'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].status === 'QA Improvements'){
 						arraydone.push(abc[i]);
 					}		
 					this.setState({type: 'QA Improvements'});	
 				}
-			} else if (type == 'Under Review'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === 'Under Review'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].status === 'Under Review'){
 						arraydone.push(abc[i]);
 					}			
 					this.setState({type: 'Under Review'});
 				}
-			} else if (type == 'Peer Review'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === 'Peer Review'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].status === 'Peer Review'){
 						arraydone.push(abc[i]);
 					}		
 					this.setState({type: 'Peer Review'});	
 				}
-			} else if (type == 'Pending'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === 'Pending'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].status === 'Pending'){
 						arraydone.push(abc[i]);
 					}	
 					this.setState({type: 'Pending'});		
 				}
-			} else if (type == 'In Progress'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === 'In Progress'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].status === 'In Progress'){
 						arraydone.push(abc[i]);
 					}			
 					this.setState({type: 'In Progress'});
 				}
-			} else if (type == 'Ready for Dev'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === 'Ready for Dev'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].status === 'Ready for Dev'){
 						arraydone.push(abc[i]);
 					}			
 					this.setState({type: 'Ready for Dev'});
 				}
-			} else if (type == 'Open'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === 'Open'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].status === 'Open'){
 						arraydone.push(abc[i]);
 					}			

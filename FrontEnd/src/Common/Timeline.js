@@ -13,9 +13,14 @@ export default class Timeline extends React.Component {
     };
   }
 
-  render() {    
+  render() {  
+    
+    var data2 = 0;
+    var hora2 = 0;
+    var res2 = 0;
 
-    const {curIdx, prevIdx} = this.state;
+    //const {curIdx, prevIdx} = this.state;
+    const curIdx = this.state;
     const curStatus = this.props.data[curIdx] ? this.props.data[curIdx].statusInicio : 0;
     const prevStatus = this.props.data[curIdx] ? this.props.data[curIdx].statusFim : 0;
     const hora = this.props.data[curIdx] ? this.props.data[curIdx].hora : 0;
@@ -23,14 +28,14 @@ export default class Timeline extends React.Component {
       var data1 = this.props.data[curIdx] ? (this.props.data[curIdx].data || '0000/00/00') : '0000/00/00';
       var hora1 = this.props.data[curIdx] ? (this.props.data[curIdx].hora || '00-00-00' ) : '00-00-00';
       var res1 = data1.concat(' '+hora1);
-      if(this.props.data[curIdx-1] == undefined){
-        var data2 = this.props.data[curIdx] ? (this.props.data[curIdx].data || '0000/00/00') : '0000/00/00';
-        var hora2 = this.props.data[curIdx] ? (this.props.data[curIdx].hora || '00-00-00' ) : '00-00-00';
-        var res2 = data2.concat(' '+hora2);
+      if(this.props.data[curIdx-1] === undefined){
+        data2 = this.props.data[curIdx] ? (this.props.data[curIdx].data || '0000/00/00') : '0000/00/00';
+        hora2 = this.props.data[curIdx] ? (this.props.data[curIdx].hora || '00-00-00' ) : '00-00-00';
+        res2 = data2.concat(' '+hora2);
       } else {
-        var data2 = this.props.data[curIdx-1] ? this.props.data[curIdx-1].data : this.props.data[curIdx].data;
-        var hora2 = this.props.data[curIdx-1] ? this.props.data[curIdx-1].hora : this.props.data[curIdx].hora;
-        var res2 = data2.concat(' '+hora2);
+        data2 = this.props.data[curIdx-1] ? this.props.data[curIdx-1].data : this.props.data[curIdx].data;
+        hora2 = this.props.data[curIdx-1] ? this.props.data[curIdx-1].hora : this.props.data[curIdx].hora;
+        res2 = data2.concat(' '+hora2);
       }
   
       const DateSinceObj = {

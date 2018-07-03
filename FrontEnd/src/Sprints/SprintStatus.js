@@ -21,24 +21,25 @@ export default class SprintStatus extends React.Component{
 		}
 
 		filter(type){
+			var i = 0;
 			var abc = this.props.data;
 			const arraydone = [];
-				if(type == 'CLOSED'){
-					for(var i = 0; i<abc.length; i++){
+				if(type === 'CLOSED'){
+					for(i = 0; i<abc.length; i++){
 						if(abc[i].state === 'CLOSED'){
 							arraydone.push(abc[i]);
 						}	
 					this.setState({type: 'CLOSED'});			
 					}
-			} else if(type == 'ACTIVE'){
-				for(var i = 0; i<abc.length; i++){
+			} else if(type === 'ACTIVE'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].state === 'ACTIVE'){
 						arraydone.push(abc[i]);
 					}
 					this.setState({type: 'ACTIVE'});			
 				}
-			} else if (type == 'FUTURE'){
-				for(var i = 0; i<abc.length; i++){
+			} else if (type === 'FUTURE'){
+				for(i = 0; i<abc.length; i++){
 					if(abc[i].state === 'FUTURE'){
 						arraydone.push(abc[i]);
 					}

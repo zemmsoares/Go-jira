@@ -40,7 +40,7 @@ export default class TableSprintsBuild extends React.Component {
 
     }
     columnsBuilder () { //Remove data
-        if(this.props.data == 0){
+        if(this.props.data === 0){
            return
         }
         const props = Object.keys(this.props.data[0]); //Use Props
@@ -84,20 +84,20 @@ export default class TableSprintsBuild extends React.Component {
           }
 
           checkType(type){
-            if(type == 'Story'){
-              return <span><img src={Storyicon}></img> Story</span>
-            }else if (type == 'Bug') {
-              return <span><img src={Bugicon}></img> Bug</span>
-            }else if (type == 'Incident'){
-              return <span><img src={Incidenticon}></img> Incident</span>
-            }else if (type == 'Task'){
-              return <span><img src={Taskicon}></img> Task</span>
-            }else if (type == 'Sub-task'){
-              return <span><img src={Subtaskicon}></img> Sub-Task</span>
-            }else if (type == 'Epic'){
-              return <span><img src={Epicicon}></img> Epic</span>
+            if(type === 'Story'){
+              return <div><img src={Storyicon} alt="icon_story"></img> Story</div>
+            }else if (type === 'Bug') {
+              return <div><img src={Bugicon} alt="icon_bug"></img> Bug</div>
+            }else if (type === 'Incident'){
+              return <div><img src={Incidenticon} alt="icon_incident"></img> Incident</div>
+            }else if (type === 'Task'){
+              return <div><img src={Taskicon} alt="icon_task"></img> Task</div>
+            }else if (type === 'Sub-task'){
+              return <div><img src={Subtaskicon} alt="icon_sub-task"></img> Sub-Task</div>
+            }else if (type === 'Epic'){
+              return <div><img src={Epicicon} alt="icon_epic"></img> Epic</div>
             }
-            return <div>LOL</div>
+            return <div>undefined</div>
           }
 
           
@@ -170,25 +170,17 @@ export default class TableSprintsBuild extends React.Component {
                     getTdProps={(state, rowInfo, column, instance) => {
                         return {
                             onClick: e => 
-                            (
-                            console.log("Cell - onMouseEnter", {
-                                state,
-                                rowInfo,
-                                column,
-                                instance,
-                                event: e
-                              }), this.setState({
+                            this.setState({
                                   selected: rowInfo ? rowInfo.row.id : '0',
                               }, () => this.handleSubmit())
-                            )
                         };
                       }}
                 /> 
                 <Modal  show={this.state.isOpen} onClose={this.toggleModal} titulo={'Sprint '+this.state.selected} story={<button className="btn storybutton" onClick={this.toggleModal2}>StoryPoints</button>}>
-                    <TableClick data={filteredCompletedIssues} header={'Completed Issues'+' ('+filteredCompletedIssues.length+')'} />
-                    <TableClick data={filteredIssuesNotCompletedInCurrentSprint} header={'Issues Not Completed in Current Sprint'+' ('+filteredIssuesNotCompletedInCurrentSprint.length+')'} />
-                    <TableClick data={filteredPuntedIssues} header={'Punted Issues'+' ('+filteredPuntedIssues.length+')'} />
-                    <TableClick data={filteredIssuesCompletedInAnotherSprint} header={'IssuesCompleted in Another Sprint'+' ('+filteredIssuesCompletedInAnotherSprint.length+')'} />
+                    <TableClick data={filteredCompletedIssues} header={'Completed Issues ('+filteredCompletedIssues.length+')'} />
+                    <TableClick data={filteredIssuesNotCompletedInCurrentSprint} header={'Issues Not Completed in Current Sprint ('+filteredIssuesNotCompletedInCurrentSprint.length+')'} />
+                    <TableClick data={filteredPuntedIssues} header={'Punted Issues ('+filteredPuntedIssues.length+')'} />
+                    <TableClick data={filteredIssuesCompletedInAnotherSprint} header={'IssuesCompleted in Another Sprint ('+filteredIssuesCompletedInAnotherSprint.length+')'} />
                 </Modal >
                 <br />
 

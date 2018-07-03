@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import moment from 'moment';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import { DateRangePicker } from 'react-dates';
 import 'react-select/dist/react-select.css';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
@@ -69,7 +69,7 @@ export default class AdvancedSearch extends React.Component{
 
       fetchForSelectedOptions(){
         var filteredArray = this.state.cleanArray;
-        if (filteredArray == ""){
+        if (filteredArray === ""){
           return;
         }else{
         for (var i = 0; i < filteredArray.length; i++) {
@@ -95,18 +95,18 @@ export default class AdvancedSearch extends React.Component{
   }
 
   checkType(type){
-    if(type == 'Story'){
-      return <span><img src={Storyicon}></img> Story</span>
-    }else if (type == 'Bug') {
-      return <span><img src={Bugicon}></img> Bug</span>
-    }else if (type == 'Incident'){
-      return <span><img src={Incidenticon}></img> Incident</span>
-    }else if (type == 'Task'){
-      return <span><img src={Taskicon}></img> Task</span>
-    }else if (type == 'Sub-task'){
-      return <span><img src={Subtaskicon}></img> Sub-Task</span>
-    }else if (type == 'Epic'){
-      return <span><img src={Epicicon}></img> Epic</span>
+    if(type === 'Story'){
+      return <div><img src={Storyicon} alt="icon_story"></img> Story</div>
+    }else if (type === 'Bug') {
+      return <div><img src={Bugicon} alt="icon_bug"></img> Bug</div>
+    }else if (type === 'Incident'){
+      return <div><img src={Incidenticon} alt="icon_incident"></img> Incident</div>
+    }else if (type === 'Task'){
+      return <div><img src={Taskicon} alt="icon_task"></img> Task</div>
+    }else if (type === 'Sub-task'){
+      return <div><img src={Subtaskicon} alt="icon_sub-task"></img> Sub-Task</div>
+    }else if (type === 'Epic'){
+      return <div><img src={Epicicon} alt="icon_epic"></img> Epic</div>
     }
     return <div>undefined</div>
   }
@@ -153,8 +153,6 @@ export default class AdvancedSearch extends React.Component{
 
 
   var filteredResult2 = filteredResult.filter(value => Object.keys(value).length !== 0);
-
-    const { selectedOption } = this.state;
 
     const { disabled, stayOpen, value} = this.state;
 

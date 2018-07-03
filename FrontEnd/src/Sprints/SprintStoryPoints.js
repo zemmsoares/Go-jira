@@ -13,7 +13,7 @@ export default class SprintStoryPoints extends React.Component {
     var a = [];
 
     for (let i = 0; i < issues.length; i++) {
-        if(issues[i].storyPoints == 0){
+        if(issues[i].storyPoints === 0){
 
         }else{
             a.push(issues[i]);

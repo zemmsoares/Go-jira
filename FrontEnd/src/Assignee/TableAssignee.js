@@ -62,20 +62,20 @@ export default class TableAssignee extends React.Component {
   }
 
   checkType(type){
-    if(type == 'Story'){
-      return <div><img src={Storyicon}></img> Story</div>
-    }else if (type == 'Bug') {
-      return <div><img src={Bugicon}></img> Bug</div>
-    }else if (type == 'Incident'){
-      return <div><img src={Incidenticon}></img> Incident</div>
-    }else if (type == 'Task'){
-      return <div><img src={Taskicon}></img> Task</div>
-    }else if (type == 'Sub-task'){
-      return <div><img src={Subtaskicon}></img> Sub-Task</div>
-    }else if (type == 'Epic'){
-      return <div><img src={Epicicon}></img> Epic</div>
+    if(type === 'Story'){
+      return <div><img src={Storyicon} alt="icon_story"></img> Story</div>
+    }else if (type === 'Bug') {
+      return <div><img src={Bugicon} alt="icon_bug"></img> Bug</div>
+    }else if (type === 'Incident'){
+      return <div><img src={Incidenticon} alt="icon_incident"></img> Incident</div>
+    }else if (type === 'Task'){
+      return <div><img src={Taskicon} alt="icon_task"></img> Task</div>
+    }else if (type === 'Sub-task'){
+      return <div><img src={Subtaskicon} alt="icon_sub-task"></img> Sub-Task</div>
+    }else if (type === 'Epic'){
+      return <div><img src={Epicicon} alt="icon_epic"></img> Epic</div>
     }
-    return <div>LOL</div>
+    return <div>undefined</div>
   }
 
 render() { 

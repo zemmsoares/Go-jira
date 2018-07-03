@@ -25,7 +25,6 @@ export default class SelectBoard extends React.Component {
         this.state = {
             value: 1,
             exemplo: 1,
-            example: 55,
             boardname: '',
             completedIssues: [],
             issuesNotCompletedInCurrentSprint: [],
@@ -114,16 +113,16 @@ export default class SelectBoard extends React.Component {
 
     Green(){
         const estado = (this.state.example.fields ? this.state.example.fields.status.name : 'Empty');
-        if(estado == 'Done'){
-            return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={done} className='estado' ></img></div>
-        } else if (estado == 'Ready for Dev') {
-            return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={readyfordev} className='estado' ></img></div>
-        } else if (estado == 'In Progress') {
-            return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={inprogress} className='estado' ></img></div>
-        } else if (estado == 'Pending'){
-            return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={pending} className='estado' ></img></div>
-        } else if (estado == 'Peer Review'){
-          return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={peerreview} className='estado' ></img></div>
+        if(estado === 'Done'){
+            return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={done} className='estado' alt="peerreview" ></img></div>
+        } else if (estado === 'Ready for Dev') {
+            return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={readyfordev} className='estado' alt="peerreview" ></img></div>
+        } else if (estado === 'In Progress') {
+            return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={inprogress} className='estado' alt="peerreview" ></img></div>
+        } else if (estado === 'Pending'){
+            return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={pending} className='estado' alt="peerreview" ></img></div>
+        } else if (estado === 'Peer Review'){
+          return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={peerreview} className='estado' alt="peerreview" ></img></div>
         }
         return <div>{estado}</div>
     }
@@ -150,7 +149,7 @@ export default class SelectBoard extends React.Component {
         const value = 1;
         var sprintid = document.getElementById("SearchTxt2").value;
         this.setState({selected: sprintid});
-        var string2 = url+value+'/'+sprintid;~
+        var string2 = url+value+'/'+sprintid;
         console.log(string2)
         fetch(string2)
         .then(function(response) {
@@ -174,22 +173,22 @@ export default class SelectBoard extends React.Component {
             });
             }
 
-        checkType(type){
-            if(type == 'Story'){
-              return <span><img src={Storyicon}></img> Story</span>
-            }else if (type == 'Bug') {
-              return <span><img src={Bugicon}></img> Bug</span>
-            }else if (type == 'Incident'){
-              return <span><img src={Incidenticon}></img> Incident</span>
-            }else if (type == 'Task'){
-              return <span><img src={Taskicon}></img> Task</span>
-            }else if (type == 'Sub-task'){
-              return <span><img src={Subtaskicon}></img> Sub-Task</span>
-            }else if (type == 'Epic'){
-              return <span><img src={Epicicon}></img> Epic</span>
-            }
-            return <div>LOL</div>
-          }
+            checkType(type){
+                if(type === 'Story'){
+                  return <div><img src={Storyicon} alt="icon_story"></img> Story</div>
+                }else if (type === 'Bug') {
+                  return <div><img src={Bugicon} alt="icon_bug"></img> Bug</div>
+                }else if (type === 'Incident'){
+                  return <div><img src={Incidenticon} alt="icon_incident"></img> Incident</div>
+                }else if (type === 'Task'){
+                  return <div><img src={Taskicon} alt="icon_task"></img> Task</div>
+                }else if (type === 'Sub-task'){
+                  return <div><img src={Subtaskicon} alt="icon_sub-task"></img> Sub-Task</div>
+                }else if (type === 'Epic'){
+                  return <div><img src={Epicicon} alt="icon_epic"></img> Epic</div>
+                }
+                return <div>undefined</div>
+              }
 
           arrayteste(){
             const filterteste = this.state.example.changelog.histories.map(item => (
@@ -229,7 +228,7 @@ export default class SelectBoard extends React.Component {
 
               let b = [];
               for (let x = 0; x < a.length; x++) {
-                  if(a[x].status == 'status'){
+                  if(a[x].status === 'status'){
                       b.push(
                           {
                             data: a[x].data.slice(0,10),
@@ -370,7 +369,7 @@ export default class SelectBoard extends React.Component {
 
                     <div class="row">
                         <div class="col-sm-1">  
-                               <img src={this.state.example.fields.assignee.avatarUrls ? this.state.example.fields.assignee.avatarUrls['48x48'] : 'Empty'} className='avatar-assignee' /> 
+                               <img src={this.state.example.fields.assignee.avatarUrls ? this.state.example.fields.assignee.avatarUrls['48x48'] : 'Empty'} className='avatar-assignee' alt="avatar" /> 
                         </div>
                         <div class="col-sm-11">
                                 <div>Creator: <b>{this.state.example.fields.creator ? this.state.example.fields.creator.name : 'EMPTY'}</b> ({this.state.example.fields.creator ? this.state.example.fields.creator.displayName : 'EMPTY'})</div>
@@ -401,10 +400,10 @@ export default class SelectBoard extends React.Component {
                 </Modal>
 
                 <Modal  show={this.state.isOpen2} onClose={this.toggleModal2} titulo={'Sprint '+this.state.selected} story={<button className="btn storybutton" onClick={this.toggleModal3}>StoryPoints</button>}>
-                    <TableClick data={filteredCompletedIssues} header={'Completed Issues'+' ('+filteredCompletedIssues.length+')'} />
-                    <TableClick data={filteredIssuesNotCompletedInCurrentSprint} header={'Issues Not Completed in Current Sprint'+' ('+filteredIssuesNotCompletedInCurrentSprint.length+')'} />
-                    <TableClick data={filteredPuntedIssues} header={'Punted Issues'+' ('+filteredPuntedIssues.length+')'} />
-                    <TableClick data={filteredIssuesCompletedInAnotherSprint} header={'IssuesCompleted in Another Sprint'+' ('+filteredIssuesCompletedInAnotherSprint.length+')'} />
+                    <TableClick data={filteredCompletedIssues} header={'Completed Issues ('+filteredCompletedIssues.length+')'} />
+                    <TableClick data={filteredIssuesNotCompletedInCurrentSprint} header={'Issues Not Completed in Current Sprint ('+filteredIssuesNotCompletedInCurrentSprint.length+')'} />
+                    <TableClick data={filteredPuntedIssues} header={'Punted Issues ('+filteredPuntedIssues.length+')'} />
+                    <TableClick data={filteredIssuesCompletedInAnotherSprint} header={'IssuesCompleted in Another Sprint ('+filteredIssuesCompletedInAnotherSprint.length+')'} />
                 </Modal >
                 <br />
 

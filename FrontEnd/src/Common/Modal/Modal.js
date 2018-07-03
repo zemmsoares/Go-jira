@@ -48,7 +48,7 @@ export default class ModalIssueSearch  extends React.Component {
   }
 }
 
-ModalIssueSearch .propTypes = {
+ModalIssueSearch.propTypes = {
   onClose: PropTypes.func.isRequired,
   show: PropTypes.bool,
   children: PropTypes.node

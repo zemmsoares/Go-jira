@@ -114,26 +114,26 @@ export default class TableClick extends React.Component {
           }
 
 
-          Green(){
+          TaskStatus(){
               const estado = (this.state.example.fields ? this.state.example.fields.status.name : 'Empty');
-              if(estado == 'Done'){
-                  return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={done} className='estado' ></img></div>
-              } else if (estado == 'Ready for Dev') {
-                  return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={readyfordev} className='estado' ></img></div>
-              } else if (estado == 'In Progress') {
-                  return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={inprogress} className='estado' ></img></div>
-              } else if (estado == 'Pending'){
-                  return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={pending} className='estado' ></img></div>
-              } else if (estado == 'Peer Review'){
-                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={peerreview} className='estado' ></img></div>
-              } else if (estado == 'Ready for Testing') {
-                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={readyfortesting} className='estado' ></img></div>
-              } else if (estado == 'Under Review') {
-                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={underreview} className='estado' ></img></div>
-              } else if (estado == 'In Test') {
-                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={intest} className='estado' ></img></div>
-              }else if (estado == 'QA Improvements') {
-                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={qa} className='estado' ></img></div>
+              if(estado === 'Done'){
+                  return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={done} className='estado' alt="done" ></img></div>
+              } else if (estado === 'Ready for Dev') {
+                  return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={readyfordev} className='estado' alt="readyfordev" ></img></div>
+              } else if (estado === 'In Progress') {
+                  return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={inprogress} className='estado' alt="inprogress" ></img></div>
+              } else if (estado === 'Pending'){
+                  return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={pending} className='estado' alt="pending" ></img></div>
+              } else if (estado === 'Peer Review'){
+                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={peerreview} className='estado' alt="peerreview" ></img></div>
+              } else if (estado === 'Ready for Testing') {
+                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={readyfortesting} className='estado' alt="readyfortesting" ></img></div>
+              } else if (estado === 'Under Review') {
+                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={underreview} className='estado' alt="underreview" ></img></div>
+              } else if (estado === 'In Test') {
+                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={intest} className='estado' alt="intest" ></img></div>
+              }else if (estado === 'QA Improvements') {
+                return <div><c style={{color: '#b8b7ad'}}>{this.state.example.key}</c>   <img src={qa} className='estado' alt="qa" ></img></div>
               }
               return <div>{estado}</div>
           }
@@ -149,20 +149,20 @@ export default class TableClick extends React.Component {
           }
 
           checkType(type){
-            if(type == 'Story'){
-              return <span><img src={Storyicon}></img> Story</span>
-            }else if (type == 'Bug') {
-              return <span><img src={Bugicon}></img> Bug</span>
-            }else if (type == 'Incident'){
-              return <span><img src={Incidenticon}></img> Incident</span>
-            }else if (type == 'Task'){
-              return <span><img src={Taskicon}></img> Task</span>
-            }else if (type == 'Sub-task'){
-              return <span><img src={Subtaskicon}></img> Sub-Task</span>
-            }else if (type == 'Epic'){
-              return <span><img src={Epicicon}></img> Epic</span>
+            if(type === 'Story'){
+              return <div><img src={Storyicon} alt="icon_story"></img> Story</div>
+            }else if (type === 'Bug') {
+              return <div><img src={Bugicon} alt="icon_bug"></img> Bug</div>
+            }else if (type === 'Incident'){
+              return <div><img src={Incidenticon} alt="icon_incident"></img> Incident</div>
+            }else if (type === 'Task'){
+              return <div><img src={Taskicon} alt="icon_task"></img> Task</div>
+            }else if (type === 'Sub-task'){
+              return <div><img src={Subtaskicon} alt="icon_sub-task"></img> Sub-Task</div>
+            }else if (type === 'Epic'){
+              return <div><img src={Epicicon} alt="icon_epic"></img> Epic</div>
             }
-            return <div>LOL</div>
+            return <div>undefined</div>
           }
 
 
@@ -203,7 +203,7 @@ export default class TableClick extends React.Component {
 
               let b = [];
               for (let x = 0; x < a.length; x++) {
-                  if(a[x].status == 'status'){
+                  if(a[x].status === 'status'){
                       b.push(
                           {
                             data: a[x].data.slice(0,10),
@@ -232,27 +232,19 @@ export default class TableClick extends React.Component {
                     getTdProps={(state, rowInfo, column, instance) => {
                         return {
                             onClick: e => 
-                            (
-                            console.log("Cell - onMouseEnter", {
-                                state,
-                                rowInfo,
-                                column,
-                                instance,
-                                event: e
-                              }), this.setState({
+                            this.setState({
                                   selected: rowInfo ? rowInfo.row.id : '',
                               }, () => this.handleSubmit())
-                            )
                         };
                       }}
                 /> 
                 
-                <Modal  show={this.state.isOpen} onClose={this.toggleModal} titulo={this.Green(this.state.example.fields ? this.state.example.fields.status.name : 'empty')}>
+                <Modal  show={this.state.isOpen} onClose={this.toggleModal} titulo={this.TaskStatus(this.state.example.fields ? this.state.example.fields.status.name : 'empty')}>
                 <p></p>
 
                     <div class="row">
                         <div class="col-sm-1">  
-                               <img src={this.state.example.fields.assignee ? (this.state.example.fields.assignee.avatarUrls['48x48'] || 'http://www.gravatar.com/avatar/0548f8c27d935d940d40d92c3b4e1a50?d=mm&s=48') : 'http://www.gravatar.com/avatar/0548f8c27d935d940d40d92c3b4e1a50?d=mm&s=48'} className='avatar-assignee' /> 
+                               <img src={this.state.example.fields.assignee ? (this.state.example.fields.assignee.avatarUrls['48x48'] || 'http://www.gravatar.com/avatar/0548f8c27d935d940d40d92c3b4e1a50?d=mm&s=48') : 'http://www.gravatar.com/avatar/0548f8c27d935d940d40d92c3b4e1a50?d=mm&s=48'} className='avatar-assignee' alt="avatar" /> 
                         </div>
                         <div class="col-sm-11">
                                 <div>Creator: <b>{this.state.example.fields.creator ? (this.state.example.fields.creator.name || 'Not Defined') : 'Not Defined'}</b> ({this.state.example.fields.creator ? (this.state.example.fields.creator.displayName || 'Not Defined') : 'Not Defined'})</div>

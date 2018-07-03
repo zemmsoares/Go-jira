@@ -3,7 +3,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Route from  'react-router-dom/Route';
 import './App.css';
 import Header from './Header';
-import Home from './Common/Home';
 import SelectBoard from './Sprints/SelectBoard';
 import SelectAssignee from './Assignee/SelectAssignee';
 import logo from './img/logo.png';
@@ -20,7 +19,7 @@ export default class App extends Component {
                 () => {
                   return( 
                               <div className="homelogo">
-                              <img src={logo}/>
+                              <img src={logo} alt="logo"/>
                               </div>
                    );
                 }
