@@ -89,7 +89,7 @@ export default class SprintStatusTable extends React.Component {
     }
 
     handleSubmit2(){
-        const url = [config.backend.url]+'/sprints/';
+        const url = [config.jira.server]+'/sprints/';
         const value = 1;
         var sprintid = this.state.selected;
         var string2 = url+value+'/'+sprintid;
@@ -110,7 +110,7 @@ export default class SprintStatusTable extends React.Component {
         }
 
         fetchIssues(){
-            const url = [config.backend.url]+'/issue/';
+            const url = [config.jira.server]+'/issue/';
             var issueid = this.state.selected;
             var string2 = url+issueid+'/changelog';
             fetch(string2)

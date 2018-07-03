@@ -47,7 +47,7 @@ export default class AdvancedSearch extends React.Component{
 
   fetchData(){
     let initialBoards = [];
-    fetch([config.backend.url]+'/users/GO&maxResults=5000')
+    fetch([config.jira.server]+'/users/'+[config.jira.projectkey]+'&maxResults=5000')
           .then(response => {
               return response.json();
           }).then(data => {
@@ -73,7 +73,7 @@ export default class AdvancedSearch extends React.Component{
           return;
         }else{
         for (var i = 0; i < filteredArray.length; i++) {
-          const url = [config.backend.url]+'/issues/assigned/';
+          const url = [config.jira.server]+'/issues/assigned/';
           const value = filteredArray[i];
           const string = url+value+'&maxResults=5000';
           fetch(string)

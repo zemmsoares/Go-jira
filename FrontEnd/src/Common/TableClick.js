@@ -100,7 +100,7 @@ export default class TableClick extends React.Component {
      
 
         fetchIssues(){
-            const url = [config.backend.url]+'/issue/';
+            const url = [config.jira.server]+'/issue/';
             var issueid = this.state.selected;
             var string2 = url+issueid+'/changelog';
             fetch(string2)

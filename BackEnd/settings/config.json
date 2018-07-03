@@ -1,6 +1,6 @@
 {
 	"jira" : {
 		"host" : "HOST",
-		"token" : "TOKEN"
+		"token" : "BASE64 STRING"
 	}
 }

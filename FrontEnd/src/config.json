@@ -1,8 +1,7 @@
 {
 	"jira" : {
+		"projectkey" : "TES",
+		"server" : "http://localhost:8000",
 		"storypointsfield" : "customfield_10002"
-	},
-	"backend" : {
-		"url" : "http://localhost:8000"
 	}
 }

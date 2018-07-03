@@ -18,7 +18,7 @@ export default class TableSprints extends React.Component {
   }
 
   fetchData() {
-  const url = [config.backend.url]+'/sprints/';
+  const url = [config.jira.server]+'/sprints/';
   const value = this.props.value;
   var string = url+value;
   fetch(string)

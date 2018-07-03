@@ -710,3 +710,7 @@ datesince {
   font-weight: bold;
   font-size: 80%;
 }
+
+.inputserver {
+  width: 300px;
+}

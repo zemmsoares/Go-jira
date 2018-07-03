@@ -44,9 +44,7 @@ export default class SelectBoard extends React.Component {
                     },
                     assignee: {
                         avatarUrls: {
-                            '48x48':{
-
-                            }
+                            '48x48': 'https://avatar-cdn.atlassian.com/027b1915db1b356e9ca8c02f7a553c6b?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F027b1915db1b356e9ca8c02f7a553c6b%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue',
                         }
                     },
                     creator: {
@@ -72,7 +70,6 @@ export default class SelectBoard extends React.Component {
       this.setState({boardname: el.getAttribute('boardname')});
     }
 
-
     componentDidMount() {
     this.fetchData();
     this.fetchIssues();
@@ -81,7 +78,7 @@ export default class SelectBoard extends React.Component {
 
     fetchData(){
         let initialBoards = [];
-    fetch([config.backend.url]+'/rapidview/')
+    fetch([config.jira.server]+'/rapidview/')
         .then(response => {
             return response.json();
         }).then(data => {
@@ -96,7 +93,7 @@ export default class SelectBoard extends React.Component {
 
 
   fetchIssues(){
-    const url = [config.backend.url]+'/sprints/';
+    const url = [config.jira.server]+'/sprints/';
     const value = this.state.value;
     var sprintid = this.state.example;
     var string2 = url+value+'/'+sprintid;
@@ -115,30 +112,6 @@ export default class SelectBoard extends React.Component {
     });
     }
 
-       handleSubmit(e){
-        e.preventDefault();
-        const url = [config.backend.url]+'/issue/';
-        var issueid = document.getElementById("SearchTxt").value;
-        if(issueid == 0){
-            alert('Please insert IssueID or IssueKey')
-        }else{
-            var string2 = url+issueid+'/changelog';
-            fetch(string2)
-            .then(function(response) {
-              return response.json();
-            })
-            .then((myJson) => this.conditionalChaining(myJson));
-        }
-}
-
-conditionalChaining(myJson) {
-    if (myJson.errorMessages == 'Issue Does Not Exist') {
-        alert('Issue doesn´t exist');
-    } else {
-        this.setState({example: myJson},() => { this.arrayteste(); this.toggleModal()});
-    }
-}
-
     Green(){
         const estado = (this.state.example.fields ? this.state.example.fields.status.name : 'Empty');
         if(estado == 'Done'){
@@ -155,21 +128,37 @@ conditionalChaining(myJson) {
         return <div>{estado}</div>
     }
 
+    handleSubmit(e){
+        e.preventDefault();
+        const url = [config.jira.server]+'/issue/';
+        var issueid = document.getElementById("SearchTxt").value;
+        var string2 = url+issueid+'/changelog';
+        console.log(string2)
+        fetch(string2)
+        .then(function(response) {
+            return response.json();
+        })
+        .then((myJson) => this.setState({example: myJson},() => { this.arrayteste(); this.toggleModal()})
+        ).catch(function(error) {
+            alert('Error');
+        });
+        }
 
     handleSubmit2(e){
         e.preventDefault();
-        const url = [config.backend.url]+'/sprints/';
+        const url = [config.jira.server]+'/sprints/';
         const value = 1;
         var sprintid = document.getElementById("SearchTxt2").value;
         this.setState({selected: sprintid});
-        var string2 = url+value+'/'+sprintid;
+        var string2 = url+value+'/'+sprintid;~
+        console.log(string2)
         fetch(string2)
         .then(function(response) {
           return response.json();
         })
         .then((myJson) => this.setState({completedIssues: myJson.contents.completedIssues, issuesNotCompletedInCurrentSprint: myJson.contents.issuesNotCompletedInCurrentSprint, puntedIssues: myJson.contents.puntedIssues, issuesCompletedInAnotherSprint: myJson.contents.issuesCompletedInAnotherSprint },() => this.toggleModal2())
         ).catch(function(error) {
-            alert('Sprint Not Found');
+            alert('Error');
         });
     }
 
@@ -259,6 +248,7 @@ conditionalChaining(myJson) {
 
     render () {
 
+        console.log(this.state.example)
         
         const filteredCompletedIssues = this.state.completedIssues.map(item => (
           {

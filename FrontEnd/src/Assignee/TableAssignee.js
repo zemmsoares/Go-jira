@@ -21,7 +21,7 @@ export default class TableAssignee extends React.Component {
   }
 
   fetchData() {
-  const url = [config.backend.url]+'/issues/assigned/';
+  const url = [config.jira.server]+'/issues/assigned/';
   const value = this.props.value;
   const string = url+value+'&maxResults=5000';
   fetch(string)

@@ -28,6 +28,11 @@ router.get('/test', function(req,res,next){
     res.render('test', {title: 'Teste1'});
 });
 
+router.post('/config', function(req, res, next) {
+
+});
+
+
 // GET ISSUE BY ID
 router.get('/issue/:issueId', function(req, res, next) {
 

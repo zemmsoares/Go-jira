@@ -71,7 +71,7 @@ export default class TableSprintsBuild extends React.Component {
      
 
         fetchIssues(){
-            const url = [config.backend.url]+'/sprints/';
+            const url = [config.jira.server]+'/sprints/';
             const value = 1;
             var sprintid = this.state.selected;
             var string2 = url+value+'/'+sprintid;

@@ -65,7 +65,7 @@ export default class SelectAssignee extends React.Component {
 
     fetchData(){
       let initialBoards = [];
-    fetch([config.backend.url]+'/users/GO&maxResults=5000')
+    fetch([config.jira.server]+'/users/'+[config.jira.projectkey]+'&maxResults=5000')
         .then(response => {
             return response.json();
         }).then(data => {
