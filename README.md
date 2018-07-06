@@ -27,7 +27,7 @@ Make sure you include steps on how to reproduce it.
 * [Introduction](#introduction)
 * [Getting started](#getting-started)
   * [Prerequisites](#prerequisites)
-  * [Cloning the Repository](#cloning-the-Repository)
+  * [Cloning the Repository](#cloning-the-repository)
   * [Configuration](#configuration)
 	* [Generating your Encoded_Token](generating-your-encoded_token)
 	* [Find customfield_ID](find-customfield_id)
