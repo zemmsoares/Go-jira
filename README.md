@@ -5,9 +5,9 @@
 
 
 Application for monitoring Issues from JIRA Projects.  
-Check status, issues & storypoints for a given Srint,  
+Check status, issues & storypoints for a given Sprint,  
 Search Issues status, type per Assignee.  
-Advanced Search for filtering issues for multiple Assignees  
+Advanced Search for filtering issues on multiple Assignees  
 and Date Range,  
 
 [![sample screenshot](https://i.imgur.com/dc5znTc.png)](https://i.imgur.com/5oiqX3O.png)
