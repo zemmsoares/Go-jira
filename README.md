@@ -47,6 +47,7 @@ Some of the functionalities:
 - Filter by Issue type (Story, Bug, Incident, task, Sub-task, Epic)
 - Filter by Issue status (Done, Ready for Dev, QA ...)
 - Advanced Search for Multiple Assignee / Date range filter
+- Issue timeline (status changes w/ date)
 
 ## Getting Started
 
