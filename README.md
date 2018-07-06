@@ -29,8 +29,8 @@ Make sure you include steps on how to reproduce it.
   * [Prerequisites](#prerequisites)
   * [Cloning the Repository](#cloning-the-repository)
   * [Configuration](#configuration)
-	* [Generating your Encoded_Token](generating-your-encoded_token)
-	* [Find customfield_ID](find-customfield_id)
+	* [Generating your Encoded_Token](#generating-your-encoded_token)
+	* [Find customfield_ID](#find-customfield_id)
   * [Contributors](#contributors)
   
   
