@@ -1,8 +1,10 @@
 <img src="https://github.com/zemmsoares/GO-JIRA/blob/master/FrontEnd/src/img/logo.png" width="350"/>
 
-Please report any issues or bugs you may find by [creating an issue ticket](
-https://github.com/zemmsoares/GO-JIRA/issues/new) here on GitHub.
-Make sure you include steps on how to reproduce it.
+Application for monitoring Issues from JIRA Projects.  
+Check status, issues & storypoints for a given Srint,  
+Search Issues status, type per Assignee.  
+Advanced Search for filtering issues for multiple Assignees  
+and Date Range,  
 
 [![sample screenshot](https://i.imgur.com/dc5znTc.png)](https://i.imgur.com/5oiqX3O.png)
 [![sample screenshot](https://i.imgur.com/B02gWlj.png)](https://i.imgur.com/QUJKOec.png)
@@ -11,6 +13,10 @@ Make sure you include steps on how to reproduce it.
 [![sample screenshot](https://i.imgur.com/1FokdRS.png)](https://i.imgur.com/zac7YgP.png)
 [![sample screenshot](https://i.imgur.com/e3oiPfg.png)](https://i.imgur.com/OOP7WL1.png)
 [![sample screenshot](https://i.imgur.com/Tkks00R.png)](https://i.imgur.com/Ob4qAwu.png)
+
+Please report any issues or bugs you may find by [creating an issue ticket](
+https://github.com/zemmsoares/GO-JIRA/issues/new) here on GitHub.
+Make sure you include steps on how to reproduce it.
 
 ## Table of Contents
 
