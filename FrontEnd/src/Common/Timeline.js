@@ -20,7 +20,7 @@ export default class Timeline extends React.Component {
     var res2 = 0;
 
     //const {curIdx, prevIdx} = this.state;
-    const curIdx = this.state;
+    const {curIdx} = this.state;
     const curStatus = this.props.data[curIdx] ? this.props.data[curIdx].statusInicio : 0;
     const prevStatus = this.props.data[curIdx] ? this.props.data[curIdx].statusFim : 0;
     const hora = this.props.data[curIdx] ? this.props.data[curIdx].hora : 0;
