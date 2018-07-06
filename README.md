@@ -19,22 +19,19 @@ and Date Range,
 [![sample screenshot](https://i.imgur.com/Tkks00R.png)](https://i.imgur.com/Ob4qAwu.png)
 
 Please report any issues or bugs you may find by [creating an issue ticket](
-https://github.com/zemmsoares/GO-JIRA/issues/new) here on GitHub.
+https://github.com/zemmsoares/GO-JIRA/issues/new) here on GitHub.  
 Make sure you include steps on how to reproduce it.
 
 ## Table of Contents
 
 * [Introduction](#introduction)
 * [Getting started](#getting-started)
-  * [Dependencies](#dependencies)
   * [Prerequisites](#prerequisites)
   * [Cloning the Repository](#cloning-the-Repository)
   * [Configuration](#configuration)
-  	* [Find customfield_ID](#find-customfield_id)
 	* [Generating your Encoded_Token](generating-your-encoded_token)
 	* [Find customfield_ID](find-customfield_id)
-	
-  * [Running](#generating-your-encoded_token)
+  * [Contributors](#contributors)
   
   
 ## Introduction
