@@ -1,5 +1,7 @@
 <img src="https://github.com/zemmsoares/GO-JIRA/blob/master/FrontEnd/src/img/logo.png" width="350"/>
 
+![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars)
+
 Application for monitoring Issues from JIRA Projects.  
 Check status, issues & storypoints for a given Srint,  
 Search Issues status, type per Assignee.  
