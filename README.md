@@ -3,7 +3,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/zemmsoares/GO-JIRA.svg?style=social&label=Stars)](https://github.com/zemmsoares/GO-JIRA) 
 ![GitHub followers](https://img.shields.io/github/followers/zemmsoares.svg?style=social&label=Follow)
 
-
 Application for monitoring Issues from JIRA Projects.  
 Check status, issues & storypoints for a given Sprint,  
 Search Issues status, type per Assignee.  
@@ -21,6 +20,10 @@ and Date Range,
 Please report any issues or bugs you may find by [creating an issue ticket](
 https://github.com/zemmsoares/GO-JIRA/issues/new) here on GitHub.  
 Make sure you include steps on how to reproduce it.
+
+
+![Alt Text](https://media.giphy.com/media/8TtpNbfRtMuo30h34C/giphy.gif)
+
 
 ## Table of Contents
 
