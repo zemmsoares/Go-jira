@@ -22,9 +22,6 @@ https://github.com/zemmsoares/GO-JIRA/issues/new) here on GitHub.
 Make sure you include steps on how to reproduce it.
 
 
-![Alt Text](https://media.giphy.com/media/8TtpNbfRtMuo30h34C/giphy.gif)
-
-
 ## Table of Contents
 
 * [Introduction](#introduction)
